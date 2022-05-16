@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #FB6B6B;
+    font-family: 'Recursive', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-family: 'Recursive', sans-serif;
+}
+
+/* tools */
+.righteous {
     font-family: 'Righteous', cursive;
 }
 
-.recursive {
-    font-family: 'Recursive', sans-serif;
+.hidden {
+    display: none;
 }
 
 /* Initial page */
@@ -30,10 +49,191 @@ body {
 }
 
 .initial-page button {
+    background-color: white;
     width: 246px;
     height: 55px;
-    
+
     font-size: 18px;
     color: #D70900;
+    border-radius: 8px;
     border: none;
+    /* box-shadow: 10 10 black; */
+}
+
+/* /Initial page */
+
+/* Recall page */
+.recall {
+    margin: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    background-color: #FB6B6B;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 10px;
+    top: 5%;
+    left: 0;
+    z-index: 1;
+}
+
+.header > img {
+    width: 52px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header > h1 {
+    font-size: 36px;
+    color: white;
+}
+
+/* Game */
+.game {
+    display: flex;
+    margin-top: 48px;
+    margin-bottom: 120px;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.question {
+
+    background-color: white;
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.question span {
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question ion-icon {
+    font-size: 30px;
+}
+
+.question p {
+    font-size: 18px;
+}
+
+.question .q-title {
+    font-weight: 700;
+}
+
+.flashcard .front-face , .flashcard .back-face{
+    background-color: #FFFFD4;
+    height: 131px;
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.flashcard p {
+    padding: 10px;
+}
+
+.front-face img {
+    position: absolute;
+    height: 20px;
+    bottom: 2%;
+    right: 6%;
+}
+
+.back-face .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.back-face button {
+    height: 48px;
+    width: 86px;
+
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.not-remembered {
+    background-color: #FF3030;
+}
+.almost-n-r {
+    background-color: #FF922E;
+}
+.zap {
+    background-color: #2FBE34;
+}
+
+.answered {
+    background-color: white;
+    height: 65px;
+    border-radius: 8px;
+    padding: 0 4px;
+}
+
+.answered p {
+    text-decoration: line-through;
+}
+
+.answered .a-not-remembered {
+    color: #D70900;
+}
+
+.answered .a-almost-n-r {
+    color:#FF922E;
+}
+
+.answered .a-zap {
+    color: #2FBE34;
+}
+
+.footer {
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer .message {
+    display: flex;
+    width: 220px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer .message > div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer .message img {
+    margin-right: 6px;
+}
+
+.footer > p {
+    font-size: 18px;
 }

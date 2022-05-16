@@ -1,4 +1,3 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
 import ReactDom from "react-dom";
 
 import "./assets/reset.css"
